@@ -1,0 +1,15 @@
+macos_instance:
+  image: big-sur-xcode
+
+task:
+  name: XCLogParser
+  build_script:
+    - xcodebuild -scheme noapp -derivedDataPath ~/dd
+  always:
+    xclogparser_parse_script:
+      - brew install xclogparser
+      - xclogparser parse --project noapp --reporter flatJson --output xclogparser.json --derived_data ~/dd
+    xclogparser_upload_artifacts:
+      path: "xclogparser.json"
+      type: text/json
+      format: xclogparser
