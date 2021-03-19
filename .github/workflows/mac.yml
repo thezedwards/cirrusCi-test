@@ -1,0 +1,14 @@
+name: jobs_building
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - name: Check node version
+      run: |
+        node -v
